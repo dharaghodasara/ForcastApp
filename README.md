@@ -10,5 +10,7 @@ Or else it include only one platform "android". so you can directly open project
 cordova steps:
 =============
 1>copy this code in one directory.
-2>run cordova build android 
+
+2>run cordova build android
+
 3>run cordova run android
