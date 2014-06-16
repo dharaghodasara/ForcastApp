@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>UiCode</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="bower_components/foundation/css/foundation.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+</head>
+
+<body>
+    <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="contain-to-grid sticky header">
+        <nav class="top-bar" data-topbar data-options="sticky_on: large">
+            <ul class="title-area">
+                <li class="name">
+                    <h1><a href="#">Weather App</a>
+                    </h1>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main row" style="margin-top:40px;width:90%;">
+        <div class="container"></div>
+    </div>
+    <!-- build:js scripts/main.js -->
+     <script type="text/javascript" src="cordova.js"></script>
+    <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+
+    <!-- endbuild -->
+    <!-- <script src="http://192.168.1.115:8080/target/target-script-min.js#anonymous"></script>-->
+</body>
+
+</html>

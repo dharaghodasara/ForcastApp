@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="columns large-12">
+        <div class="panel">
+        	<h4><b><%=cityName%></b></h4>
+        	
+            <% _ .each(data,function(item){console.log(item);%>
+				<hr/>
+                <div class="row">
+                    <div class="columns large-4 small-4 medium-4">
+                        <h5>
+                            <% var monthNames=[ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]; %>
+                                <%=monthNames[new Date(item.dt * 1000).getMonth()] %>
+
+                                    <%=new Date(item.dt * 1000).getDate() %>
+                        </h5>
+                        <p>
+                            <% if(item.weather[0].main==='Clear' ){%>
+                                <img src="images/sunny.png" alt=""><br/> Sunny
+                                <% }else{ %>
+                                    <img src="images/rain.png" alt=""><br/> Rainy
+                                    <% } %>
+                        </p>
+                    </div>
+                    <div class="columns large-4 medium-4 small-4">
+                    	<h2><%=Math.round(item.temp.max-273.15)%>°C</h2>
+                    	<h4><%=Math.round(item.temp.min-273.15)%>°C</h4>                    	
+                    </div>
+                    <div class="columns large-4 medium-4 small-4">
+                        <p><b>Wind:</b>
+                            <%=item.speed%>at mph</p>
+                        <p><b>Humidity:</b>
+                            <%=item.humidity%>
+                        </p>
+                    </div>
+                </div>
+                <!-- <hr/> -->
+                <%});%>
+        </div>
+    </div>
+</div>
